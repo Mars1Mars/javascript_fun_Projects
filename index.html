@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fibonacci Calculator</title>
+  <link rel=stylesheet href="./style.css">
+ <!--  <script src="./index.js" defer></script> -->
+</head>
+<body>
+<div id="bigContainer"> 
+<h1>Fibonacci</h1>
+<p>Fibonacci is a sequence of number where each number is the sum of the two prceedings ones. Starting from 0
+    and 1. Enter a number to get the Fibonacci sequence up to that number. </p>
+
+<div id="inputContainer"> 
+<input type="number" id="inputText" placeholder="Enter any number">
+</div>
+<div id="outputContainer">
+<p id="outputText">  </p>
+</div>
+<div id="button">
+<button id="sumbitButton"> GET FIBONACCI </button>
+</div>
+<script>
+    document.getElementById('sumbitButton').addEventListener('click', function(){
+    const input = document.getElementById('inputText').value;
+    const output = document.getElementById('outputText');
+    let sequence =[];
+    try{
+        if (input < 0){
+            throw new Error('Input cannot be negative');
+        }
+        else if( input === '') {
+            throw new Error('Input cannnot be empty');
+        }
+        else if (isNaN(input)) {
+            throw new Error('Input must be a number');
+        }
+        else  {
+            for (let i=0; i<input; i++) {
+                if (i === 0) {
+                    sequence.push(0); 
+                }
+                else if (i === 1) {
+                    sequence.push(1); 
+                }else {sequence.push(sequence[i - 1] + sequence[i - 2]); }
+            }
+        }
+        output.innerHTML = sequence.join(', ');
+    }catch (error) { 
+        output.innerHTML = error; 
+
+    }
+    finally{
+        alert(`the ${input}th number in the fibanacci sequence is ${sequence[input - 1]}`);
+    }
+})
+</script>
+</body>
+</html>

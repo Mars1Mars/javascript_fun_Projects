@@ -1,0 +1,63 @@
+body{ display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #9e7d7d;}
+#bigContainer{
+padding: 10px;
+margin: 10px;
+width:1000px; 
+}
+#inputText{
+    width: 100%; 
+    font-size: 20px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px; 
+    border-width: 1px solid;
+    
+
+} 
+#inputContainer{
+    width: 1000px;    
+}
+#outputText{
+    width: 50%; 
+    font-size: 20px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px; 
+    border-width: 1px solid;
+
+}
+#outputContainer{
+    width: 1000px;
+}
+#sumbitButton{
+    font-size: 20px;
+    margin-top:15px; 
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+
+    color: white; 
+    background-color: #9e7d7d;
+  transition: all 0.2s ease-in-out;
+}
+#button{
+    justify-content: right;
+    display: flex;
+    align-items: center;
+}
+#sumbitButton:hover {
+    background-color: #f1f1f1;
+    color: #9e7d7d;
+  }
+  h1, p{
+    color: white;
+    text-align: justify;
+  }
